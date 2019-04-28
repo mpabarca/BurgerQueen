@@ -1,0 +1,20 @@
+{
+    "breakfast":[
+        {
+            "name": "Café Americano",
+            "price":"$500"
+        },
+        {
+            "name": "Café con Leche",
+            "price":"$700"
+        },
+        {
+            "name": "Sandwich jamón con queso",
+            "price":"$1000"
+        },
+        {
+            "name": "Jugo Natural",
+            "price":"$700"
+        }
+    ]
+}

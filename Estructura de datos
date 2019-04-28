@@ -1,0 +1,15 @@
+ESTRUCTURA DE DATOS BURGER QUEEN
+
+-CLIENTE
+	- NAME : STRING,
+	- DELIVERY : BOOLEANO,
+	- TOTAL : NUMBER,
+	- TIME-S : STRING      -> hora con :
+	- TIME-N : NUMBER,     -> hora sin :
+	- ORDER : ARRAY
+		- ITEM : STRING
+			- NOMBRE
+		- ITEM : STRING
+			- NOMBRE
+		
+

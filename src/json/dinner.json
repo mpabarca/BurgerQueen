@@ -1,0 +1,100 @@
+{
+    "dinner":[
+        {
+            "name": "Hamburguesa simple Res",
+            "price":"$1500"
+        },
+        {
+            "name": "Hamburguesa simple Pollo",
+            "price":"$1500"
+        },
+        {
+            "name": "Hamburguesa simple Vegetariana",
+            "price":"$1500"
+        },
+        {
+            "name": "Hamburguesa simple Res con Queso",
+            "price":"$2000"
+        },
+        {
+            "name": "Hamburguesa simple Pollo con Queso",
+            "price":"$2000"
+        },
+        {
+            "name": "Hamburguesa simple Vegetariana con Queso",
+            "price":"$2000"
+        },
+        {
+            "name": "Hamburguesa simple Res con Huevo",
+            "price":"$2000"
+        },
+        {
+            "name": "Hamburguesa simple Pollo con Huevo",
+            "price":"$2000"
+        },
+        {
+            "name": "Hamburguesa simple Vegetariana con Huevo",
+            "price":"$2000"
+        },
+        {
+            "name": "Hamburguesa doble Res",
+            "price":"$2500"
+        },
+        {
+            "name": "Hamburguesa doble Pollo",
+            "price":"$2500"
+        },
+        {
+            "name": "Hamburguesa doble Vegetariana",
+            "price":"$2500"
+        },
+        {
+            "name": "Hamburguesa doble Res con Queso",
+            "price":"$3000"
+        },
+        {
+            "name": "Hamburguesa doble Pollo con Queso",
+            "price":"$3000"
+        },
+        {
+            "name": "Hamburguesa doble Vegetariana con Queso",
+            "price":"$3000"
+        },
+        {
+            "name": "Hamburguesa doble Res con Huevo",
+            "price":"$3000"
+        },
+        {
+            "name": "Hamburguesa doble Pollo con Huevo",
+            "price":"$3000"
+        },
+        {
+            "name": "Hamburguesa doble Vegetariana con Huevo",
+            "price":"$3000"
+        },
+        {
+            "name": "Papas Fritas",
+            "price":"$500"
+        },
+        {
+            "name": "Onion Rings",
+            "price":"$500"
+        },
+        {
+            "name": "Agua 500ml",
+            "price":"$500"
+        },
+        {
+            "name": "Agua 750ml",
+            "price":"$800"
+        },
+        {
+            "name": "Gaseosa 500ml",
+            "price":"$700"
+        },
+        {
+            "name": "Gaseosa 750ml",
+            "price":"$1000"
+        }
+    ]
+}
