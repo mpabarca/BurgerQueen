@@ -11,19 +11,23 @@ class Order extends Component{
         super(props);
         this.state={
             name:'',
+            choiceMenu:[],
             order:[],
             total:0,
             timeS:'',
             timeN:0
         }
-        this.updateName=this.updateName.bind(this);
     }
-    updateName(name){
+    updateName=(name)=>{
         let nameClient=name
         this.setState({
             name:nameClient
         });
-        console.log(this.state.name)
+    }
+    checkChoice=(menu)=>{
+        this.setState({
+            choiceMenu:menu
+        });
     }
     render(){
         return(
@@ -32,7 +36,7 @@ class Order extends Component{
                     updateName={this.updateName}
                 />
                 <ChoiceMenu
-                    name={this.state.name}/>
+                    checkChoice={this.checkChoice}/>
                 <Menu/>
                 <Resume/>
 

@@ -16,15 +16,14 @@ class Client extends Component{
         e.preventDefault();
         this.setState({
             showName:true,
-            name:this.nameRef.current.value
         });
-        this.props.updateName(this.state.name);
+        this.props.updateName(this.nameRef.current.value);
 
     }
 
 
     render(){
-        const showClient = (this.state.showName ? (' PEDIDO DE '+(this.state.name).toUpperCase()):' ');
+        const showClient = (this.state.showName ? (' PEDIDO DE '+(this.nameRef.current.value).toUpperCase()):' ');
         return(
             <div>
                 <form onSubmit={this.updateName}>
