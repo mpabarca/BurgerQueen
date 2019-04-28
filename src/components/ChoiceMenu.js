@@ -6,7 +6,7 @@ class ChoiceMenu extends Component{
     render(){
         return(
             <div>
-
+                {this.props.name}
             </div>
         )
     }
