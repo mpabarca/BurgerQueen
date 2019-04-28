@@ -5,9 +5,6 @@ import {other} from '../json/other.json';
 // COMPONENTE PRINCIPAL 1° HU
 
 class ChoiceMenu extends Component{
-    constructor(props){
-        super(props);
-    }
 
     checkChoice=(e)=>{
         e.preventDefault();

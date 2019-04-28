@@ -29,6 +29,7 @@ class Order extends Component{
             choiceMenu:menu
         });
     }
+
     render(){
         return(
             <div>
@@ -37,7 +38,9 @@ class Order extends Component{
                 />
                 <ChoiceMenu
                     checkChoice={this.checkChoice}/>
-                <Menu/>
+                <Menu
+                    choiceMenu={this.state.choiceMenu}
+                />
                 <Resume/>
 
             </div>
