@@ -3,7 +3,7 @@ import Client from './Client';
 import ChoiceMenu from './ChoiceMenu';
 import Menu from './Menu.js';
 import Resume from './Resume';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 
 // COMPONENTE PRINCIPAL 1° HU
 
@@ -31,9 +31,22 @@ class Order extends Component{
         });
     }
     getFood=(food)=>{
-        let newOrder=[...this.state.order, food]
+        let newFood=food.split('$');
+        let foodObject={
+            name: newFood[0],
+            price: newFood[1]
+        }
+        let newOrder=[...this.state.order, foodObject]
         this.setState({
             order: newOrder
+        })
+    }
+    deleteFood=(key)=>{
+        console.log(key);
+        let newOrder=[...this.state.order];
+        let remove=newOrder.splice(key,1);
+        this.setState({
+            order:newOrder
         })
     }
 
@@ -54,7 +67,10 @@ class Order extends Component{
                 </Col>
                 <Col>
                     <Button>Nuevo Cliente</Button>
-                    <Resume/>
+                    <Resume
+                        order={this.state.order}
+                        deleteFood={this.deleteFood}
+                    />
                 </Col>
             </Row>
         )

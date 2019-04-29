@@ -6,7 +6,6 @@ class Menu extends Component{
 
     getFood=(food)=>{
         this.props.getFood(food);
-
     }
     render(){
         return(
