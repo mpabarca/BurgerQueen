@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-
-// COMPONENTE PRINCIPAL 1° HU
+import {Button} from 'react-bootstrap';
 
 class Client extends Component{
     constructor(props){
@@ -29,7 +28,7 @@ class Client extends Component{
                 <form onSubmit={this.updateName}>
                     <h4>Ingresar nombre Cliente</h4>
                     <input type="text" ref={this.nameRef} ></input>
-                    <button type="submit">ENVIAR</button>
+                    <Button type="submit">ENVIAR</Button>
                 </form>
                 <h5>{showClient}</h5>
             </div>

@@ -3,6 +3,7 @@ import Client from './Client';
 import ChoiceMenu from './ChoiceMenu';
 import Menu from './Menu.js';
 import Resume from './Resume';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 // COMPONENTE PRINCIPAL 1° HU
 
@@ -29,21 +30,33 @@ class Order extends Component{
             choiceMenu:menu
         });
     }
+    getFood=(food)=>{
+        let newOrder=[...this.state.order, food]
+        this.setState({
+            order: newOrder
+        })
+    }
 
     render(){
         return(
-            <div>
-                <Client
-                    updateName={this.updateName}
-                />
-                <ChoiceMenu
-                    checkChoice={this.checkChoice}/>
-                <Menu
-                    choiceMenu={this.state.choiceMenu}
-                />
-                <Resume/>
-
-            </div>
+            <Row>
+                <Col>
+                    <Client
+                        updateName={this.updateName}
+                    />
+                    <ChoiceMenu
+                        checkChoice={this.checkChoice}
+                    />
+                    <Menu
+                        choiceMenu={this.state.choiceMenu}
+                        getFood={this.getFood}
+                    />
+                </Col>
+                <Col>
+                    <Button>Nuevo Cliente</Button>
+                    <Resume/>
+                </Col>
+            </Row>
         )
     }
 }
