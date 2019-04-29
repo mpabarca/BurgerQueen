@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
-import {breakfast} from '../json/breakfast.json';
-import {other} from '../json/other.json';
+import {breakfast} from './json/breakfast.json';
+import {other} from './json/other.json';
 
 // COMPONENTE PRINCIPAL 1° HU
 

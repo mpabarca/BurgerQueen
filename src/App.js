@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/App.css';
 import Header from './components/Header';
-import Order from './components/Order';
+import Order from './components/Order/Order';
 
 function App() {
   return (

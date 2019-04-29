@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Client from './Client';
 import ChoiceMenu from './ChoiceMenu';
-import Menu from './Menu.js';
+import Menu from './Menu';
 import Resume from './Resume';
 import { Row, Col, Button } from 'react-bootstrap';
 
