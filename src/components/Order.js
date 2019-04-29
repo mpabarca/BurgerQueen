@@ -43,7 +43,7 @@ class Order extends Component{
     }
     deleteFood=(key)=>{
         let newOrder=[...this.state.order];
-        let remove=newOrder.splice(key,1);
+        newOrder.splice(key,1);
         this.setState({
             order:newOrder
         })
