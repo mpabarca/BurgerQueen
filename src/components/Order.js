@@ -42,12 +42,16 @@ class Order extends Component{
         })
     }
     deleteFood=(key)=>{
-        console.log(key);
         let newOrder=[...this.state.order];
         let remove=newOrder.splice(key,1);
         this.setState({
             order:newOrder
         })
+    }
+    sendKitchen=(newTotal)=>{
+        this.setState({
+            total:newTotal
+        });
     }
 
     render(){
@@ -70,6 +74,7 @@ class Order extends Component{
                     <Resume
                         order={this.state.order}
                         deleteFood={this.deleteFood}
+                        sendKitchen={this.sendKitchen}
                     />
                 </Col>
             </Row>

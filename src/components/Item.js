@@ -15,13 +15,13 @@ class Item extends Component{
         const {name,price}=this.props.info;
         return(
             <tr>
-                <td>{this.props.number}</td>
+                <td>{(this.props.number)+1}</td>
                 <td>{name}</td>
                 <td>{price}</td>
                 <td>
                     <Button variant="danger" value={this.props.number} onClick={this.deleteFood}>X</Button>
                 </td>
-          </tr>
+            </tr>
         )
     }
 }
