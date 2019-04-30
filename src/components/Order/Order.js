@@ -54,6 +54,16 @@ class Order extends Component{
             total:newTotal
         });
     }
+    newClient=()=>{
+        this.setState({
+            name:'',
+            choiceMenu:[],
+            order:[],
+            total:0,
+            timeS:'',
+            timeN:0 
+        })
+    }
 
     render(){
         return(
@@ -71,7 +81,7 @@ class Order extends Component{
                     />
                 </Col>
                 <Col>
-                    <Button>Nuevo Cliente</Button>
+                    <Button onClick={this.newClient}>Nuevo Cliente</Button>
                     <Resume
                         order={this.state.order}
                         deleteFood={this.deleteFood}
