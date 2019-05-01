@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../css/resume.css';
 import {Table, Button} from 'react-bootstrap';
 import Item from './Item';
 
@@ -23,7 +24,7 @@ class Resume extends Component{
             totalOrder+=parseInt(item.price);
         });
         return(
-            <div>
+            <div id="containerResume">
                 <Table>
                 <thead>
                     <tr>

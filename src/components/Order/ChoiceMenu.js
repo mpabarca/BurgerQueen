@@ -16,8 +16,8 @@ class ChoiceMenu extends Component{
     render(){
         return(
             <div>
-                <Button type="submit" value="breakfast" onClick={this.checkChoice}>DESAYUNO</Button>
-                <Button type="submit" value="other" onClick={this.checkChoice}>ALMUERZO Y CENA</Button>
+                <Button type="submit" variant="outline-secondary" value="breakfast" onClick={this.checkChoice}>DESAYUNO</Button>
+                <Button type="submit" variant="outline-secondary" value="other" onClick={this.checkChoice}>ALMUERZO Y CENA</Button>
                 
             </div>
         )

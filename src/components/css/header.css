@@ -1,0 +1,7 @@
+.containerHeader{
+    display: flex;
+    justify-content: space-between;
+    padding-left:50px;
+    padding-right: 50px;
+    margin-bottom: 30px;
+}

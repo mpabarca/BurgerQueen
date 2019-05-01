@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Button} from 'react-bootstrap';
+import '../css/client.css';
+import {Button, Row, Col} from 'react-bootstrap';
 
 class Client extends Component{
     constructor(props){
@@ -22,16 +23,15 @@ class Client extends Component{
 
 
     render(){
-        const showClient = (this.state.showName ? (' PEDIDO DE '+(this.nameRef.current.value).toUpperCase()):' ');
         return(
-            <div>
-                <form onSubmit={this.updateName}>
-                    <h4>Ingresar nombre Cliente</h4>
-                    <input type="text" ref={this.nameRef} ></input>
-                    <Button type="submit">ENVIAR</Button>
-                </form>
-                <h5>{showClient}</h5>
-            </div>
+            <Row id="containerClient">
+                <Col>
+                    <form onSubmit={this.updateName}>
+                        <input id="inputClient" type="text" ref={this.nameRef} placeholder="Ingresar nombre Cliente"></input>
+                        <Button type="submit" variant="warning">ENVIAR</Button>
+                    </form>
+                </Col>
+            </Row>
         )
     }
 }

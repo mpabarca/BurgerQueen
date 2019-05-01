@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../css/order.css';
 import Firebase from '../firebase/Firebase';
 import Client from './Client';
 import ChoiceMenu from './ChoiceMenu';
@@ -49,11 +50,6 @@ class Order extends Component{
             order:newOrder
         })
     }
-    sendKitchen=(newTotal)=>{
-        this.setState({
-            total:newTotal
-        });
-    }
     newClient=()=>{
         this.setState({
             name:'',
@@ -64,10 +60,14 @@ class Order extends Component{
             timeN:0 
         })
     }
-
+    sendKitchen=(newTotal)=>{
+            this.setState({
+                total:newTotal
+            });
+        }
     render(){
         return(
-            <Row>
+            <Row className="containerOrder">
                 <Col>
                     <Client
                         updateName={this.updateName}
@@ -81,7 +81,14 @@ class Order extends Component{
                     />
                 </Col>
                 <Col>
-                    <Button onClick={this.newClient}>Nuevo Cliente</Button>
+                    <Row>
+                        <Col>
+                            <div id="nameClient">{(this.state.name).toUpperCase()}</div>
+                        </Col>
+                        <Col>
+                            <Button variant="outline-secondary" onClick={this.newClient}>Nuevo Cliente</Button>
+                        </Col>
+                    </Row>
                     <Resume
                         order={this.state.order}
                         deleteFood={this.deleteFood}

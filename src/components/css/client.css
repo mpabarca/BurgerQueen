@@ -1,0 +1,9 @@
+#containerClient{
+    margin-bottom: 20px;
+}
+#inputClient{
+    height: 38px;
+    border: 1px solid #ABADB3;
+    border-right: 0;
+    border-radius: 5px;
+}

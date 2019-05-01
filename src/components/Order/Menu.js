@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../css/menu.css';
 import {Row} from 'react-bootstrap';
 import Food from './Food';
 
@@ -9,7 +10,7 @@ class Menu extends Component{
     }
     render(){
         return(
-            <Row>
+            <Row id="containerMenu">
                 {Object.keys(this.props.choiceMenu).map(key=>(
                     <Food
                         key={key}

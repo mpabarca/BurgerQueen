@@ -1,0 +1,12 @@
+.containerOrder{
+    width: 95%;
+    margin-left: 2.5%;
+}
+#nameClient{
+    font-size: 25px;
+    border:1px solid #DCDCDC;
+    height: 38px;
+    border-radius: 5px;
+    background: #DCDCDC;
+    text-align: center;
+}
