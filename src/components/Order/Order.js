@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './css/order.css';
-import Firebase from '../firebase/Firebase';
 import Client from './Client';
 import ChoiceMenu from './ChoiceMenu';
 import Menu from './Menu';
