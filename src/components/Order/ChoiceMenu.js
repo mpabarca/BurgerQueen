@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../css/choiceMenu.css';
 import {Button} from 'react-bootstrap';
 import {breakfast} from './json/breakfast.json';
 import {other} from './json/other.json';
@@ -16,8 +17,8 @@ class ChoiceMenu extends Component{
     render(){
         return(
             <div>
-                <Button type="submit" variant="outline-secondary" value="breakfast" onClick={this.checkChoice}>DESAYUNO</Button>
-                <Button type="submit" variant="outline-secondary" value="other" onClick={this.checkChoice}>ALMUERZO Y CENA</Button>
+                <Button className="buttonMenu" type="submit" variant="outline-secondary" value="breakfast" onClick={this.checkChoice}>DESAYUNO</Button>
+                <Button className="buttonMenu" type="submit" variant="outline-secondary" value="other" onClick={this.checkChoice}>ALMUERZO Y CENA</Button>
                 
             </div>
         )
