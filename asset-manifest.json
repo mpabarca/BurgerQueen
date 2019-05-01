@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/BurgerQueen/static/css/main.c18e4ed3.chunk.css",
+    "main.js": "/BurgerQueen/static/js/main.0bab8fef.chunk.js",
+    "main.js.map": "/BurgerQueen/static/js/main.0bab8fef.chunk.js.map",
+    "runtime~main.js": "/BurgerQueen/static/js/runtime~main.a15aad73.js",
+    "runtime~main.js.map": "/BurgerQueen/static/js/runtime~main.a15aad73.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/BurgerQueen/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.359f7023.chunk.js": "/BurgerQueen/static/js/2.359f7023.chunk.js",
+    "static/js/2.359f7023.chunk.js.map": "/BurgerQueen/static/js/2.359f7023.chunk.js.map",
+    "index.html": "/BurgerQueen/index.html",
+    "precache-manifest.a52cf0bf497c16699ddd438e3ff54318.js": "/BurgerQueen/precache-manifest.a52cf0bf497c16699ddd438e3ff54318.js",
+    "service-worker.js": "/BurgerQueen/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/BurgerQueen/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.c18e4ed3.chunk.css.map": "/BurgerQueen/static/css/main.c18e4ed3.chunk.css.map"
+  }
+}
