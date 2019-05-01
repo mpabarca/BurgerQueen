@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/header.css';
+import './header.css';
 import {Navbar, Button} from 'react-bootstrap';
 
 const Header = () =>{

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../css/client.css';
+import './css/client.css';
 import {Button, Row, Col} from 'react-bootstrap';
 
 class Client extends Component{

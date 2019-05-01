@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../css/resume.css';
+import './css/resume.css';
 import {Table, Button} from 'react-bootstrap';
 import Item from './Item';
 

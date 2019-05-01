@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../css/menu.css';
+import './css/menu.css';
 import {Row} from 'react-bootstrap';
 import Food from './Food';
 

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../css/choiceMenu.css';
+import './css/choiceMenu.css';
 import {Button} from 'react-bootstrap';
 import {breakfast} from './json/breakfast.json';
 import {other} from './json/other.json';
