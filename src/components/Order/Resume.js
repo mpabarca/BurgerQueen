@@ -17,6 +17,7 @@ class Resume extends Component{
     sendKitchen(e){
         e.preventDefault();
         this.props.sendKitchen(e.target.value);
+        alert('Enviado a cocina');
     }
     render(){  
         let totalOrder=0;
