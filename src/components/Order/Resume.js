@@ -50,13 +50,10 @@ class Resume extends Component{
                     <tr>
                         <td>TOTAL:</td>
                         <td>{totalOrder}</td>
-                        <td>
-                            <Button variant="success" value={totalOrder} onClick={this.sendKitchen}>ENVIAR A COCINA</Button>
-                        </td>
                     </tr>
                 </tbody>
                 </Table>
-
+                <Button variant="success" value={totalOrder} onClick={this.sendKitchen}>ENVIAR A COCINA</Button>
             </div>
         )
     }
