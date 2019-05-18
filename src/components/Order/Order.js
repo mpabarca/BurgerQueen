@@ -4,7 +4,9 @@ import Client from './Client';
 import ChoiceMenu from './ChoiceMenu';
 import Menu from './Menu';
 import Resume from './Resume';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button, Navbar } from 'react-bootstrap';
+import {Link} from 'react-router-dom';
+import '../header.css';
 
 
 // COMPONENTE PRINCIPAL 1° HU
@@ -108,35 +110,42 @@ class Order extends Component{
 
     render(){
         return(
-            <Row className="containerOrder">
-                <Col>
-                    <Client
-                        updateName={this.updateName}
-                    />
-                    <ChoiceMenu
-                        checkChoice={this.checkChoice}
-                    />
-                    <Menu
-                        choiceMenu={this.state.choiceMenu}
-                        getFood={this.getFood}
-                    />
-                </Col>
-                <Col>
-                    <Row>
-                        <Col>
-                            <div id="nameClient">{(this.state.name).toUpperCase()}</div>
-                        </Col>
-                        <Col>
-                            <Button variant="outline-secondary" onClick={this.newClient}>Nuevo Cliente</Button>
-                        </Col>
-                    </Row>
-                    <Resume
-                        order={this.state.order}
-                        deleteFood={this.deleteFood}
-                        sendKitchen={this.sendKitchen}
-                    />
-                </Col>
-            </Row>
+            <div>
+                <Navbar bg="light" variant="light" className="containerHeader">
+                    <Link to="/Order"><Button >REALIZAR PEDIDO</Button></Link>
+                    <Button >CENTRAL</Button>
+                    <Link to="/Kitchen"><Button >COCINA</Button></Link>
+                </Navbar>
+                <Row className="containerOrder">
+                    <Col>
+                        <Client
+                            updateName={this.updateName}
+                        />
+                        <ChoiceMenu
+                            checkChoice={this.checkChoice}
+                        />
+                        <Menu
+                            choiceMenu={this.state.choiceMenu}
+                            getFood={this.getFood}
+                        />
+                    </Col>
+                    <Col>
+                        <Row>
+                            <Col>
+                                <div id="nameClient">{(this.state.name).toUpperCase()}</div>
+                            </Col>
+                            <Col>
+                                <Button variant="outline-secondary" onClick={this.newClient}>Nuevo Cliente</Button>
+                            </Col>
+                        </Row>
+                        <Resume
+                            order={this.state.order}
+                            deleteFood={this.deleteFood}
+                            sendKitchen={this.sendKitchen}
+                        />
+                    </Col>
+                </Row>
+            </div>
         )
     }
 }
