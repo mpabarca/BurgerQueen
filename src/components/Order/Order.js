@@ -63,7 +63,33 @@ class Order extends Component{
             this.setState({
                 total:newTotal
             });
+    }
+    componentDidMount(){
+        const nameLS=localStorage.getItem('name');
+        const orderLS=localStorage.getItem('order');
+        const totalLS=localStorage.getItem('total');
+        if (nameLS){
+            this.setState({
+                name:JSON.parse(nameLS)
+            })
         }
+        if (orderLS){
+            this.setState({
+                order:JSON.parse(orderLS)
+            })
+        }
+        if (totalLS){
+            this.setState({
+                total:JSON.parse(totalLS)
+            })
+        }
+    }
+    componentDidUpdate(){
+        localStorage.setItem('name',JSON.stringify(this.state.name));
+        localStorage.setItem('order',JSON.stringify(this.state.order));
+        localStorage.setItem('total',JSON.stringify(this.state.total));
+    }
+
     render(){
         return(
             <Row className="containerOrder">
