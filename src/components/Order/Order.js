@@ -6,6 +6,7 @@ import Menu from './Menu';
 import Resume from './Resume';
 import { Row, Col, Button } from 'react-bootstrap';
 
+
 // COMPONENTE PRINCIPAL 1° HU
 
 class Order extends Component{
@@ -60,9 +61,24 @@ class Order extends Component{
         })
     }
     sendKitchen=(newTotal)=>{
-            this.setState({
-                total:newTotal
-            });
+        this.setState({
+            total:newTotal
+        });
+        let orderString=[];
+        (this.state.order).forEach(food=>{orderString.push(food.name)});
+        
+        let date=new Date();
+        let dateString=date.getHours()+':'+date.getMinutes();
+        let dateNumber=date.getTime();
+
+        let client={
+            name:this.state.name,
+            delivery: false,
+            total: parseInt(this.state.total),
+            timeS:dateString,
+            timestamp:dateNumber,
+            order: orderString
+        };        
     }
     componentDidMount(){
         const nameLS=localStorage.getItem('name');
@@ -125,4 +141,4 @@ class Order extends Component{
     }
 }
 
-export default Order
+export default Order;
