@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Row, Col, Button, Table } from 'react-bootstrap';
+import Header from '../Header';
 import '../header.css';
 
 class Kitchen extends Component{

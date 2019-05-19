@@ -5,6 +5,7 @@ import ChoiceMenu from './ChoiceMenu';
 import Menu from './Menu';
 import Resume from './Resume';
 import { Row, Col, Button} from 'react-bootstrap';
+import Header from '../Header';
 import '../header.css';
 
 
@@ -67,6 +68,8 @@ class Order extends Component{
         let date=new Date();
         let dateString=date.getHours()+':'+date.getMinutes();
         let dateNumber=date.getTime();
+        
+        console.log(this.state.total);
 
         let client={
             name:this.state.name,
@@ -77,6 +80,13 @@ class Order extends Component{
             order: this.state.order
         };  
         this.props.sendKitchen(client);
+        this.setState({
+            name:'',
+            choiceMenu:[],
+            order:[],
+            timeS:'',
+            timeN:0 
+        })
     }
     componentDidMount(){
         const nameLS=localStorage.getItem('name');
@@ -102,6 +112,7 @@ class Order extends Component{
         localStorage.setItem('name',JSON.stringify(this.state.name));
         localStorage.setItem('order',JSON.stringify(this.state.order));
         localStorage.setItem('total',JSON.stringify(this.state.total));
+        
     }
 
     render(){
@@ -109,6 +120,7 @@ class Order extends Component{
         this.state.order.forEach(item=>{
             totalOrder+=parseInt(item.price);
         });
+        
         return(
             <div>
                 <Row className="containerOrder">
