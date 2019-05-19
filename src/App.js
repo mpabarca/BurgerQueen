@@ -3,10 +3,10 @@ import './components/Order/css/App.css';
 import Header from './components/Header';
 import Order from './components/Order/Order';
 import Kitchen from './components/Kitchen/Kitchen';
-
 //Redux
 import {Provider} from 'react-redux';
 import store from './store';
+
 
 class App extends Component{
   constructor(props){

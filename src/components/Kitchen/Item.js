@@ -9,13 +9,16 @@ class Item extends Component{
 
     render(){
         const item =this.props.info;
-        console.log(item);
+        let textOrder='';
+
+        console.log(item.order);
         return(
             <tr>
                 <td>{this.props.number+1}</td>
                 <td>{item.timeS}</td>
                 <td>{item.name}</td>
-                <td><Button variant="success" value={this.props.number}><i className="fas fa-check"></i></Button></td>
+                <td>{item.order}</td>
+                <td><Button variant="success" value={this.props.number}>LISTO</Button></td>
             </tr>
         )
     }
