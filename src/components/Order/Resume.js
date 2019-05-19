@@ -9,21 +9,12 @@ class Resume extends Component{
     constructor(props){
         super(props);
         this.deleteFood=this.deleteFood.bind(this);
-        this.sendKitchen=this.sendKitchen.bind(this);
     }
     deleteFood(key){
         this.props.deleteFood(key);
     }
-    sendKitchen(e){
-        e.preventDefault();
-        this.props.sendKitchen(e.target.value);
-        alert('Enviado a cocina');
-    }
     render(){  
-        let totalOrder=0;
-        this.props.order.forEach(item=>{
-            totalOrder+=parseInt(item.price);
-        });
+        
         return(
             <div id="containerResume">
                 <Table>
@@ -44,17 +35,9 @@ class Resume extends Component{
                             deleteFood={this.deleteFood}
                         />
                     ))}
-                    
-
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>TOTAL:</td>
-                        <td>{totalOrder}</td>
-                    </tr>
                 </tbody>
                 </Table>
-                <Button variant="success" value={totalOrder} onClick={this.sendKitchen}>ENVIAR A COCINA</Button>
+                
             </div>
         )
     }

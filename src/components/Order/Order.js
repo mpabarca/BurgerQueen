@@ -4,8 +4,7 @@ import Client from './Client';
 import ChoiceMenu from './ChoiceMenu';
 import Menu from './Menu';
 import Resume from './Resume';
-import { Row, Col, Button, Navbar } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import { Row, Col, Button} from 'react-bootstrap';
 import '../header.css';
 
 
@@ -14,6 +13,7 @@ import '../header.css';
 class Order extends Component{
     constructor(props){
         super(props);
+        this.sendKitchen=this.sendKitchen.bind(this);
         this.state={
             name:'',
             choiceMenu:[],
@@ -62,12 +62,7 @@ class Order extends Component{
             timeN:0 
         })
     }
-    sendKitchen=(newTotal)=>{
-        this.setState({
-            total:newTotal
-        });
-        let orderString=[];
-        (this.state.order).forEach(food=>{orderString.push(food.name)});
+    sendKitchen(){
         
         let date=new Date();
         let dateString=date.getHours()+':'+date.getMinutes();
@@ -79,8 +74,9 @@ class Order extends Component{
             total: parseInt(this.state.total),
             timeS:dateString,
             timestamp:dateNumber,
-            order: orderString
-        };        
+            order: this.state.order
+        };  
+        this.props.sendKitchen(client);
     }
     componentDidMount(){
         const nameLS=localStorage.getItem('name');
@@ -109,13 +105,12 @@ class Order extends Component{
     }
 
     render(){
+        let totalOrder=0;
+        this.state.order.forEach(item=>{
+            totalOrder+=parseInt(item.price);
+        });
         return(
             <div>
-                <Navbar bg="light" variant="light" className="containerHeader">
-                    <Link to="/Order"><Button >REALIZAR PEDIDO</Button></Link>
-                    <Button >CENTRAL</Button>
-                    <Link to="/Kitchen"><Button >COCINA</Button></Link>
-                </Navbar>
                 <Row className="containerOrder">
                     <Col>
                         <Client
@@ -141,8 +136,14 @@ class Order extends Component{
                         <Resume
                             order={this.state.order}
                             deleteFood={this.deleteFood}
-                            sendKitchen={this.sendKitchen}
                         />
+                        <tbody>
+                            <tr>
+                                <td>TOTAL: $ </td>
+                                <td>{totalOrder}</td>
+                            </tr>
+                        </tbody>
+                        <Button variant="success" onClick={this.sendKitchen}>ENVIAR A COCINA</Button>
                     </Col>
                 </Row>
             </div>

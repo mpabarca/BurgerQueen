@@ -4,24 +4,29 @@ import Header from './components/Header';
 import Order from './components/Order/Order';
 
 //Redux
-import {Provider} from 'react-redux';
-import store from './store';
+
 
 class App extends Component{
   constructor(props){
     super(props);
+    this.toKitchen=this.toKitchen.bind(this);
     this.state={
-
+      clients:[]
     }
   }
+  toKitchen(client){
+    console.log(client);
+  }
+
   render(){
     return (
-      <Provider store={store} >
+      <div>
 
         <Header/>
-        <Order/>
+        <Order
+          sendKitchen={this.toKitchen}/>
         
-      </Provider>
+      </div>
     );
   }
 }

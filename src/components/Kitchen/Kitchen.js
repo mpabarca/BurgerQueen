@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import { Row, Col, Button, Navbar } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import { Row, Col, Button, Table } from 'react-bootstrap';
 import '../header.css';
 
 class Kitchen extends Component{
@@ -8,11 +7,31 @@ class Kitchen extends Component{
     render(){
         return(
             <div>
-                <Navbar bg="light" variant="light" className="containerHeader">
-                    <Link to="/Order"><Button >REALIZAR PEDIDO</Button></Link>
-                    <Button >CENTRAL</Button>
-                    <Link to="/Kitchen"><Button >COCINA</Button></Link>
-                </Navbar>
+                <Table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>HORA</th>
+                            <th>CLIENTE</th>
+                            <th>PEDIDO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>12:33</td>
+                            <td>Laura</td>
+                            <td>Hamburguesa Simple, Agua</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>12:33</td>
+                            <td>Laura</td>
+                            <td>Hamburguesa Simple, Agua</td>
+                        </tr>
+                    </tbody>
+                </Table>
+
             </div>
         )
     }
