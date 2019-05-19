@@ -30,6 +30,7 @@ class App extends Component{
       clients:[...this.state.clients,client]
     })
     console.log(this.state.clients);
+
   }
 
   render(){
@@ -45,7 +46,7 @@ class App extends Component{
         }
         {(this.state.activeMenu === 'kitchen') &&
           <Kitchen
-            
+            clients={this.state.clients}
           />
         }
       </Provider>

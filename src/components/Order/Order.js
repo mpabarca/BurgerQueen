@@ -5,7 +5,6 @@ import ChoiceMenu from './ChoiceMenu';
 import Menu from './Menu';
 import Resume from './Resume';
 import { Row, Col, Button} from 'react-bootstrap';
-import Header from '../Header';
 import '../header.css';
 
 
@@ -42,8 +41,10 @@ class Order extends Component{
             price: newFood[1]
         }
         let newOrder=[...this.state.order, foodObject]
+        let newTotal=this.state.total+parseInt(foodObject.price);
         this.setState({
-            order: newOrder
+            order: newOrder,
+            total:newTotal
         })
     }
     deleteFood=(key)=>{
@@ -69,12 +70,11 @@ class Order extends Component{
         let dateString=date.getHours()+':'+date.getMinutes();
         let dateNumber=date.getTime();
         
-        console.log(this.state.total);
 
         let client={
             name:this.state.name,
             delivery: false,
-            total: parseInt(this.state.total),
+            total: this.state.total,
             timeS:dateString,
             timestamp:dateNumber,
             order: this.state.order
